@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+        function menu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display == "none" || menu.style.display == "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+    
+</head>
+
+<body class="bg-[#0E0E0E]">
+    <nav>
+        <div class="text-[#ffffff] list-none flex text-xm lg:text-sm justify-between">
+            <div class="menu text-[#ffffff] w-8 mx-4 my-3 cursor-pointer lg:hidden" onclick="menu()">
+                <img src="img/menu.png" alt="img" />
+            </div>
+            <div id="menu" class="left hidden absolute mt-16 mx-3 lg:flex lg:relative lg:mt-0">
+                <li class="home m-1 my-5 cursor-pointer lg:mx-5"><a href="/#">Home</a></li>
+                <li class="about m-1 my-5 cursor-pointer lg:mx-5"><a href="/aboutus.html">about us</a></li>
+                <li class="customer m-1 my-5 cursor-pointer lg:mx-5"><a href="/CustomerSupport">Customer Support</a></li>
+            </div>
+            <div class="right flex mr-6 items-center">
+                <div class="search flex mr-20 items-center">
+                    <div class="input lg:flex hidden bg-[#ffffff] rounded-lg h-9 mt-4 mr-3 text-xs justify-between lg:text-sm">
+                        <input class="h-6 mt-1 ml-1 outline-none text-[#000] text-lg" type="text" />
+                        <img class="bg-[#ffffff] w-6 h-6 p-1 mt-1 mr-3" src="img/compass.png" alt="" />
+                    </div>
+                    <div class="input lg:flex hidden bg-[#ffffff] rounded-lg h-9 mt-4 ml-3 justify-between">
+                        <input class="h-6 mt-1 ml-1 outline-none text-[#000] text-lg" type="text" />
+                        <a href="/home.html"><img class="bg-[#ffffff] w-6 h-6 p-1 mt-1 mr-3" src="img/search-interface-symbol.png" alt="" /></a>
+                    </div>
+                </div>
+                <li class="mx-4 my-4 cursor-pointer"><a href="/signup.html">Register</a></li>
+                <li class="mx-4 my-4 cursor-pointer"><a href="/login.html">Log in</a></li>
+            </div>
+        </div>
+        <div class="bg-[#A511FF] h-1 mt-4"></div>
+    </nav>
+    <section class="flex justify-center lg:block">
+        <div class="imgcontainer lg:flex lg:mt-14 lg:mx-8">
+            <div class="group">
+                <div class="relative ">
+                    <img class="img lg:h-64 mt-6 transform scale-100 hover:scale-105 hover:blur-[.1rem] transition-transform duration-300 ease-in-out" src="img/Rectangle 4.png" alt="">
+                    <div class="des absolute text-white bottom-0 left-[-1.70%] hidden bg-[#A511FF] w-[103%] h-[25%] text-center hover:block "><span class="text-lg pt-5">Electricians</span></div>
+                </div>
+                <div class="relative ">
+                    <img class="img lg:h-64 mt-2 ml-11 transform scale-100 hover:scale-105 hover:blur-[.1rem] transition-transform duration-300 ease-in-out" src="img/Rectangle 6.png" alt="">
+                    <div class="des absolute text-white bottom-[-0.2rem] left-[8%] hidden bg-[#A511FF] w-[93%] h-[25%] text-center hover:block "><span class="text-lg pt-5">Mechanic</span></div>
+                </div>
+                
+            </div>
+            <div class="group">
+                <div class="relative "> 
+                    <img class="img lg:h-64 mt-2 ml-2 transform scale-100 hover:scale-105 hover:blur-[.1rem] transition-transform duration-300 ease-in-out" src="img/Rectangle 5.png" alt="">
+                    <div class="des absolute text-white bottom-[-2%] left-[-1%] hidden bg-[#A511FF] w-[77%] h-[25%] text-center hover:block "><span class="text-lg pt-5">Plumber</span></div>
+                    
+                    
+                </div>
+                <div class="relative ">
+                    <img class="img lg:h-64 mt-4 ml-2 transform scale-100 hover:scale-105 hover:blur-[.1rem] transition-transform duration-300 ease-in-out" src="img/Rectangle 7.png" alt="">
+                    <div class="des absolute text-white bottom-[-2.2%] left-[-1%] hidden bg-[#A511FF] w-[103.5%] h-[25%] text-center hover:block "><span class="text-lg pt-5">Labours</span></div>
+                    
+                    
+                </div>
+            </div>
+            <img class="hidden lg:block lg:h-96 lg:mt-20 lg:ml-20 transition-transform duration-[500s] ease-linear animate-spin-slow spin" src="img/image_1-removebg-preview.png" alt="">
+        
+            <button class=" hidden lg:block absolute text-[#FFFFFF] bg-[#A511FF] right-[13%] top-[50%] py-1 text-xl w-[8rem] h-10 rounded-xl"><a href="signup.html">Explore</a></button>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body class="bg-[#0E0E0E]">
+    <nav>
+        <div class="text-[#ffffff] list-none flex text-xm lg:text-sm justify-between">
+            <div class="menu text-[#ffffff] w-8 mx-4 my-3 cursor-pointer lg:hidden" onclick="menu()">
+                <img src="img/menu.png" alt="img" />
+            </div>
+            <div id="menu" class="left hidden absolute mt-16 mx-3 lg:flex lg:relative lg:mt-0">
+                <li class="home m-1 my-5 cursor-pointer lg:mx-5"><a href="/#">Home</a></li>
+                <li class="about m-1 my-5 cursor-pointer lg:mx-5"><a href="/about">about us</a></li>
+                <li class="customer m-1 my-5 cursor-pointer lg:mx-5"><a href="/CustomerSupport">Customer Support</a></li>
+            </div>
+            <div class="right flex mr-6 items-center">
+                <div class="search flex mr-20 items-center">
+                    <div class="input lg:flex hidden bg-[#ffffff] rounded-lg h-9 mt-4 mr-3 text-xs justify-between lg:text-sm">
+                        <input class="h-6 mt-1 ml-1 outline-none text-[#000] text-lg" type="text" />
+                        <a href="/home.html"><img class="bg-[#ffffff] w-6 h-6 p-1 mt-1 mr-3" src="img/compass.png" alt="" /></a>
+                    </div>
+                    <div class="input lg:flex hidden bg-[#ffffff] rounded-lg h-9 mt-4 ml-3 justify-between">
+                        <input class="h-6 mt-1 ml-1 outline-none text-[#000] text-lg" type="text" />
+                        <img class="bg-[#ffffff] w-6 h-6 p-1 mt-1 mr-3" src="img/search-interface-symbol.png" alt="" />
+                    </div>
+                </div>
+                <p>XYZjhingala</p>
+                <img class="h-12 m-3 mb-1" src="img/profile.png" alt="profile">
+            </div>
+        </div>
+        <div class="bg-[#A511FF] h-1 mt-4"></div>
+    </nav>
+
+
+    <section class="flex">
+        <div class="ml-5 text-white">
+            <h1 class="text-white text-3xl mt-5">Filter</h1>
+            <div>
+                <h1 class="text-white text-xl mt-5">Radius of work(Km)</h1>
+                <input type="range" min="1" max="100" value="10" class="slider w-56 mt-5 "  step="1">
+                <div class="ml-1">
+                    <span class="text-white mr-14">0</span>
+                    <span class="mx-auto">Value: <output class="value"></output></span>
+                    <span class="text-white ml-12">100</span>
+                </div>
+                <h1 class="text-white text-xl mt-3">Wages</h1>
+                <h2 class="text-white text-lg mt-3">Min(Rs)</h2>
+                <input type="range" min="1" max="5000" value="10" class="slider w-56 mt-5 "  step="1">
+                <div class="ml-1">
+                    <span class="text-white mr-14">0</span>
+                    <span class="mx-auto">Value: <output class="value"></output></span>
+                    <span class="text-white ml-12">5000</span>
+                </div>
+                
+                <h2 class="text-white text-lg mt-3">Max(Rs)</h2>
+                <input type="range" min="1" max="5000" value="10" class="slider w-56 mt-5 "  step="1">
+                <div class="ml-1">
+                    <span class="text-white mr-14">0</span>
+                    <span class="mx-auto">Value: <output class="value"></output></span>
+                    <span class="text-white ml-12">5000</span>
+                </div>
+                
+                <h1 class="text-white text-xl mt-5">Time Duration</h1>
+                <div >
+                    <div class=" mt-2 outline-none text-black flex mr-5">
+                        <input class="outline-none"  type="text" placeholder="min">
+                        <select name="time" id="timemin">
+                            <option value="pm">PM</option>
+                            <option value="am">AM</option>
+                        </select>
+                    </div>
+                    <div class=" mt-2 rounded-sm outline-none text-black flex">
+                        <input class="outline-none"  type="text" placeholder="max">
+                        <select name="time" id="timemax">
+                            <option value="pm">PM</option>
+                            <option value="am">AM</option>
+                        </select>
+                    </div>
+                </div>
+                <h1 class="text-white text-xl mt-5">Types of job</h1>
+                <div class="mt-3">
+                    <input type="checkbox" id="job1" name="vehicle1" value="Bike">
+                    <label for="vehicle1" class="text-white text-lg"> Electrician </label><br>
+                    <input type="checkbox" id="job2" name="vehicle2" value="Car">
+                    <label for="vehicle2" class="text-white text-lg"> Mehanic</label><br>
+                    <input type="checkbox" id="job3" name="vehicle3" value="Boat">
+                    <label for="vehicle3" class="text-white text-lg"> Plumber</label><br>
+                    <input type="checkbox" id="job4" name="vehicle3" value="Boat">
+                    <label for="vehicle3" class="text-white text-lg"> Household helper</label><br>
+                    <input type="checkbox" id="job5" name="vehicle3" value="Boat">
+                    <label for="vehicle3" class="text-white text-lg"> Daily wage worker</label><br>
+                </div>
+                <div class="mt-10">
+                    <button class="text-white border-white border-2 rounded-lg px-10 ml-12 hover:text-black hover:bg-white hover:weig" onclick=apply()>Apply</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="job_list" class="bg-[#0E0E0E] w-[100%] ml-[5%] border-[#A511FF] border-l-4">
+            
+        </div>
+    </section>
+    
+
+    <script>        
+        const value = document.querySelectorAll(".value");
+        const input = document.querySelectorAll(".slider");
+
+        for (let i = 0; i < value.length; i++) {
+            value[i].textContent = input[i].value;
+            input[i].addEventListener("input", (event) => {
+            value[i].textContent = event.target.value;
+            
+        }
+        )};
+
+        function apply() {
+            var title = "car mechanic";
+            var description_title = "we need a car mechanic";
+            var description = "so my car is not starting from 2 days so can you help me"
+            var wages_min = 200;
+            var wages_max = 300;
+            var time_min = "5PM";
+            var time_max = "7PM";
+            var date = "21-12-2002"
+
+            show(title,description_title,description,wages_min,wages_max,time_min,time_max,date);
+        }
+
+        function show(title,description_title,description,wages_min,wages_max,time_min,time_max,date){
+            var container = document.getElementById("job_list")
+
+            container.innerHTML =  container.innerHTML + ` <div class="w-[100%]">
+                <div class="w-[100%] flex mt-10">
+                    <div class="image w-28 ml-10 mx-5 my-auto">
+                        <img src="img/tool-box.png" alt="">
+                    </div>
+                    <div class="about mx-5">
+                        <div class="text-white my-3">
+                            <h1>${title}</h1>
+                            <h1>${description_title}</h1>
+                            <p>${description}</p>
+                        </div>
+                        <div class="flex text-white mx-10 ">
+                            <div class="flex mx-10">
+                                <img class="w-4 h-4 mt-1" src="img/dollar.png" alt="">
+                                <p>${wages_max}-${wages_min}</p>
+                            </div>
+                            <div class="flex mx-10">
+                                <img class="w-4 h-4 mt-1" src="img/clock.png" alt="">
+                                <p>${time_min}-${time_max}</p>
+                            </div>
+                            <div class="flex mx-10">
+                                <img class="w-4 h-4 mt-1" src="img/calendar.png" alt="">
+                                <p>${date}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apply mx-5 my-auto">
+                        <button class="text-white border-white border-2 rounded-lg px-10 ml-12 hover:text-black hover:bg-white hover:weig" >Apply</button>
+                    </div>
+                </div>
+                <div class="bg-[#A511FF] h-1 w-[90%] mt-10 mx-auto"></div>
+            </div> `;
+
+        }
+    </script>
+
+</body>
+
+</html>

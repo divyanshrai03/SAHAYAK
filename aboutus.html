@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css" />
+
+    </head>
+
+    <body class="bg-[#0E0E0E]">
+        <nav>
+            <div class="text-[#ffffff] list-none flex text-xm lg:text-sm justify-between">
+                <div class="menu text-[#ffffff] w-8 mx-4 my-3 cursor-pointer lg:hidden" onclick="menu()">
+                    <img src="img/menu.png" alt="img" />
+                </div>
+                <div id="menu" class="left hidden absolute mt-16 mx-3 lg:flex lg:relative lg:mt-0">
+                    <li class="home m-1 my-5 cursor-pointer lg:mx-5"><a href="index.html">Home</a></li>
+                    <li class="about m-1 my-5 cursor-pointer lg:mx-5"><a href="aboutus.html" class="items"></a>About us</a></li>
+                    <li class="customer m-1 my-5 cursor-pointer lg:mx-5"><a href="/CustomerSupport">Customer Support</a></li>
+                </div>
+                <div class="right flex mr-6 items-center">
+                    <div class="search flex mr-20 items-center">
+                        <div class="input lg:flex hidden bg-[white] rounded-lg h-9 mt-4 mr-3 text-xs justify-between lg:text-sm">
+                            <input class="h-6 mt-1 ml-1 outline-none text-[white] text-lg" type="text" />
+                            <img class="bg-[white] w-6 h-6 p-1 mt-1 mr-3" src="img/compass.png" alt="compass.png" />
+                        </div>
+                        <div class="input lg:flex hidden bg-[#ffffff] rounded-lg h-9 mt-4 ml-3 justify-between">
+                            <input class="h-6 mt-1 ml-1 outline-none text-[white] text-lg" type="text" />
+                            <a href="/home.html"><img class="bg-[#ffffff] w-6 h-6 p-1 mt-1 mr-3" src="img/search-interface-symbol.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <li class="mx-4 my-4 cursor-pointer"><a href="signup.html">Register</a></li>
+                    <li class="mx-4 my-4 cursor-pointer"><a href="login.html">Log in</a></li>
+                </div>
+            </div>
+            <div class="bg-[#A511FF] h-1 mt-4"></div>
+        </nav>
+        <div class="video-container m-10 ml-[30%] ">
+            <video class="w-[40rem]" src="video.mp4" controls width="320" height="240" type="video/mp4"></video>
+        </div>
+        <div class="m-10">
+            <h1 class="text-[#A511FF] text-lg">Welcome to Our Website</h1>
+            <p class="text-white text-sm pl-10 mt-2">At SAHAYAK, we're revolutionizing how people connect with maintenance professionals. Our user-friendly platform simplifies job posting and finding experts. Join us for a seamless maintenance experience.</p>
+    
+            <h2 class="text-[#A511FF] text-lg">Our Mission</h2>
+            <p class="text-white text-sm pl-10 mt-2">Our mission is to make home maintenance easier for everyone. We connect homeowners with skilled professionals, ensuring that your maintenance needs are met efficiently and hassle-free.</p>
+        
+            <h2 class="text-[#A511FF] text-lg">Get Started</h2>
+            <p class="text-white text-sm pl-10 mt-2">Ready to get started? Sign up for an account on SAHAYAK today and enjoy the benefits of our platform. Whether you need a plumber, electrician, or any other expert, we've got you covered.</p>
+            <button class="text-black rounded-lg px-5 ml-[40%] m-5 border-black bg-white" type="submit" value="signup"><a href="signup.html">Sign Up</a></button>
+        </div>
+       
+    </body>
+</html>

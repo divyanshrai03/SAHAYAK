@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Profile Dashboard</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        #dashboard {
+            display: flex;
+            
+        }
+
+        #profile {
+            flex: 0;
+            padding: -0.5em;
+            box-sizing: 10%;
+            background-color: #8207FD;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        #profile img {
+            width: 800px;
+            height: 550px;
+            border-radius: 5%;
+            margin-bottom: -200px;
+
+            margin-left: -25%;
+            margin-top: -20%;
+            background-color: transparent;
+        }
+
+        #profile h2 {
+            margin: 3%;
+
+        }
+
+        #about {
+            background-color: #8207FD;
+            padding: 20px;
+            right: 35%;
+            margin-left: -25%;
+            flex: 0;
+            
+
+
+        }
+
+        #about p {
+            margin: 0;
+            background-color: white;
+            margin: -165%;
+            margin-bottom: 750%;
+            right: 100%;
+            margin-right: -200%;
+            margin-left: -275%;
+
+        }
+
+        #actions {
+            background-color: black;
+            padding: 120px;
+            color: white;
+            margin-left: 20px;
+            left: 25%;
+            flex: 1;
+        }
+
+        #actions select, #actions input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        #apply-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            right: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <div id="profile">
+            <img src="pfp.png" alt="Profile Picture">
+            <h2>XYZ (you are an Employer)</h2>
+        </div>
+        <div id="about">
+            <p>About Me:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo lorem eu quam viverra, in tristique dolor interdum.</p>
+        </div>
+        <div id="actions">
+            <p>Job Posted:</p>
+            <select>
+                <option value="yes">Yes</option>
+                <option value="no" >No</option>
+            </select>
+            <p>Change Password:</p>
+            <input type="password" placeholder="Current Password">
+            <input type="password" placeholder="New Password">
+            <button id="apply-button">Apply Changes</button>
+        </div>
+    </div>
+</body>
+</html>

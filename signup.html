@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hackout</title>
+        <link rel="stylesheet" href="signup.css">
+
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="logo.png">
+        <meta property="og:url" content="https://_____">
+        <meta property="og:locale" content="en_IND">
+        <meta property="og:site_name" content="_______">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            body {
+                background-color: #000B42;
+                color: white;
+            }
+
+            h1 {
+                text-align: center;
+                margin: 15%;
+            }
+
+            h1 img {
+                display: block;
+                margin: 100% auto;
+                top: 10%;
+
+            }
+
+            img {
+                width: 90%;
+                height: 90%;
+                top: 15%;
+                margin-left: 45%;
+                
+                margin-bottom: -40%;
+            }
+
+            .image-upload label,
+            .image-upload input[type="file"] {
+                display: block;
+                margin:-1px auto;
+                text-align: right;
+                margin-left: 75%;
+                margin-bottom: -7%;
+            }
+
+            .image-upload input[type="file"] {
+                width: 25%; 
+                padding: 10px;
+                border: 1px solid #CACACA;
+                border-radius: 6px;
+                outline: none;
+
+            }
+
+            form {
+                text-align: left;
+                margin-top: -14%;
+            }
+
+            .form {
+                max-width: 435px;
+                width: 100%;
+                padding: 40%            ;
+                border-radius: 14px;
+                background: #FFF;
+
+            }
+
+
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            input[type="gender"], input[type="number"] {
+                width: 30%;
+                padding: 10px;
+                margin: 10px -10px;
+                border: 1px solid #CACACA;
+                border-radius: 6px;
+                outline: none;
+            }
+
+            input[type="text"]:focus,
+            input[type="password"]:focus,
+            input[type="email"]:focus,
+            input[type="gender"]:focus, input[type="number"]:focus {
+                background-color: #ddd;
+            }
+            select {
+                width: 30%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #CACACA;
+                border-radius: 6px;
+                outline: none;
+                display: inline-block;
+                text-align: center;
+            }
+
+            select:focus {
+                background-color: #ddd;
+            }
+
+            button {
+                background-color: purple;
+                color: white;
+                padding: 10px 20px;
+                margin: 10px 0;
+                border: 5%;
+                cursor: pointer;
+                width: 15%;
+                opacity: 0.9;
+                display: inline;
+                margin-left: 42%;
+                
+            }
+
+            button:hover {
+                opacity: 1;
+            }
+
+            main {
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                padding: 150px;
+                border-radius: 15px;
+
+            }
+            .hidden {
+                display: none;
+            }
+            @media screen and (max-width: 400px) {
+                .form {
+                    padding: 20px 10px;
+                }
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <main class="form-container">
+
+
+            <h1>Sign up</h1>
+            <br><br>
+            <form action="signup.html" method="post">
+
+                <div class="image-upload">
+                    <img src="/img/pfp.png" alt="pfp">
+                    <label for="user_image"></label>
+                    <input type="file" id="user_image" name="user_image" required>
+                </div>
+            
+
+                <div>
+                    <label for="Your_Name">Your Name</label><br>
+                    <input type="text" id="Your_Name" name="Your_Name" required>
+                </div>
+                
+                <div>
+                    <label for="Mobile_Number">Your Mobile Name</label><br>
+                    <input type="number" id="Mobile_Number" name="Mobile_Number">
+                </div>
+
+                <div>
+                    <label for="user_email">Email</label><br>
+                    <input type="email" id="user_email" name="user_email" required>
+                </div>
+
+                <div>
+                    <label for="user_password">Password</label><br>
+                    <input type="password" id="user_password" name="user_password" required minlength="8">
+                </div>
+
+                <div>
+                    <label for="user_confirm_password">Confirm Password</label><br>
+                    <input type="password" id="user_confirm_password"
+                    name="user_confirm_password" required>
+               
+                <div class="form-content">
+                    <label for="gender">Gender</label>
+                    <br>
+                    <select id="gender" name="gender" required>
+                        <option >select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="form-content">
+                    <label for="jobs">What are you looking for?<br></label>
+                    <select id="jobs" name="jobs" required>
+                        <option value="Finding a Job">Select</option>
+                        <option value="Finding a Job">Finding a Job</option>
+                        <option value="Hiring Someone">Hiring Someone</option>
+                    </select>
+                </div>
+
+                <div id="job-details" class="hidden">
+                    <div>
+                        <label for="job_type">Job Type</label><br>
+                        <input type="text" id="job_type" name="job_type">
+                    </div>
+                    <div>
+                        <label for="job_description">Job Description</label><br>
+                        <input type="text" id="job_description" name="job_description">
+                    </div>
+                    <div>
+                        <label for="years_experience">Years of Experience</label><br>
+                        <input type="number" id="years_experience" name="years_experience">
+                    </div>
+                </div>
+
+                <div id="employer-details" class="hidden">
+                    <div>
+                        <label for="hire_someone">Hire Someone<br></label>
+                        <input type="text" id="hire_someone" name="hire_someone">
+                    </div>
+                </div>
+                <br></br>
+                <div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+           
+        </main>
+        <style>
+            .form-container {
+            max-width: 875px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+            input:focus:invalid{
+                border : 2px solid red;
+                
+            }
+            .hidden {
+                display: none;
+            }
+
+            
+
+        </style>
+        <script>
+            const jobSelect = document.getElementById('jobs');
+            const jobDetails = document.getElementById('job-details');
+            const employerDetails = document.getElementById('employer-details');
+        
+            jobSelect.addEventListener('change', function () {
+                if (jobSelect.value === 'Finding a Job') {
+                    jobDetails.style.display = 'block';
+                    employerDetails.style.display = 'none';
+                } else if (jobSelect.value === 'Hiring Someone') {
+                    jobDetails.style.display = 'none';
+                    employerDetails.style.display = 'block';
+                } else {
+                    jobDetails.style.display = 'none';
+                    employerDetails.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+</html>
